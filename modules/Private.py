@@ -6,31 +6,31 @@ import os
 import sys
 
 
-HOME_TEXT = "<b>Helo, [{}](tg://user?id={})\n\n• Iam A Bot Project by @TGBOTZXD\n• I Can Manage Group VC's\n\n• Hit /help to know about available commands.</b>"
+HOME_TEXT = "<b>Helo, [{}](tg://user?id={})\n\n• ɪᴀᴍ ᴀ ᴀʟɪᴢᴀ ᴍᴜsɪᴄ ᴘʀᴏᴊᴇᴄᴛ ɪ ᴘʟᴀʏ ᴍᴜsɪᴄ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴘʀᴏᴊᴇᴄᴛ ʙʏ @Xd_Lif\n• ɪ ᴄᴀɴ ᴍᴀɴᴀɢᴇ ᴠᴄ's\n\n• Hit /help ᴛᴏ ᴋɴᴏᴡ  ᴀʙᴏᴜᴛ ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs.</b>"
 HELP = """
-🎧 <b>I Can Play Musics On VoiceChats 🤪</b>
+🎧 <b>ɪ ᴄᴀɴ ᴘʟᴀʏ ᴍᴜsɪᴄ's ᴏɴ ᴠᴏɪᴄᴇᴄʜᴀᴛ 🤪</b>
 
-🎶 **Common Commands**:
-• `/song` __Download Song from youtube__
-• `/play`  __Play song you requested__
-• `/help` __Show help for commands__
-• `/dplay` __Play song you requested via deezer__
-• `splay` __Play song you requested via jio saavn__
-• `/ytplay` __Play song directly from youtube server__
-• `/search` __Search video songs links__
-• `/current` __Show now playing__
-• `/playlist` __Show now playing list__
-• `/video` __Downloads video song quickly__
-🎶 **Admin Commands**:
-• `/player`  __Open music player settings panel__
-• `/pause` __Pause song play__
-• `/skip` __Skip next song__
-• `/resume`  __Resume song play__
-• `/userbotjoin`  __Invites assistant to your chat__
-• `/end` __Stops music play__
-• `/admincache` __Refresh list of admins with vc power__
-© Powered By 
-[ __@tgbotsXD || @tgbotzXD__ ]
+🎶 **ᴄᴏᴍᴍᴏɴ ᴄᴏᴍᴍᴀɴᴅs**:
+• `/song` __ᴅᴏᴡɴʟᴏᴀᴅ sᴏɴɢ ғʀᴏᴍᴇ ʏᴏᴜᴛᴜʙᴇ__
+• `/play`  __ᴘʟᴀʏ sᴏɴɢ ʏᴏᴜ ʀᴇǫᴜᴇsᴛᴇᴅ__
+• `/help` __sʜᴏᴡ ʜᴇʟᴘ ғᴏʀ ᴄᴏᴍᴍᴀɴᴅs__
+• `/dplay` __ᴘʟᴀʏ sᴏɴɢ ʏᴏɪ ʀᴇǫᴜᴇsᴛᴇᴅ ᴠɪᴀ ᴅᴇᴇᴢᴇʀ__
+• `splay` __ᴘʟᴀʏ sᴏɴɢ ʏᴏᴜ ʀᴇǫᴜᴇsᴛᴇᴅ ᴠɪᴀ ᴊɪᴏ sᴀᴀᴠɴ__
+• `/ytplay` __ᴘʟᴀʏ sᴏɴɢ ᴅɪʀᴇᴄᴛʟʏ ғʀᴏᴍ ʏᴏᴜᴛᴜʙᴇ sᴀʀᴠᴇʀ__
+• `/search` __sᴇᴀᴇᴄʜ ᴠɪᴅᴇᴏ sᴏɴɢ ʟɪɴᴋs__
+• `/current` __sʜᴏᴡ ɴᴏᴡ ᴘʟᴀʏɪɴɢ__
+• `/playlist` __sʜᴏᴡ ɴᴏᴡ ᴘʟᴀʏɪɴɢ ʟɪsᴛ__
+• `/video` __ᴅᴏᴡɴʟᴏᴀᴅs ᴠɪᴅᴇᴏ sᴏɴɢ ǫᴜɪᴠᴋʟʏ__
+🎶 **ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅs**:
+• `/player`  __ᴏᴘᴇɴ ᴍᴜsɪᴄ ᴘʟᴀʏᴇʀ sᴇᴛᴛɪɴɢs ᴘᴀɴᴇʟ__
+• `/pause` __ᴘᴀᴜsᴇ sᴏɴɢ ᴘʟᴀʏ__
+• `/skip` __sᴋɪᴘ ɴᴇxᴛ sᴏɴɢ__
+• `/resume`  __ʀᴇsᴜᴍᴇ sᴏɴɢ ᴘʟᴀʏ__
+• `/userbotjoin`  __ɪɴᴠɪᴛᴇs ᴀssɪsᴛᴀɴᴛ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ__
+• `/end` __sᴛᴏᴘ's ᴍᴜsɪᴄ ᴘʟᴀʏ__
+• `/admincache` __ʀᴇғʀᴇsʜ ʟɪsᴛ ᴏғ ᴀᴅᴍɪɴs ᴡɪᴛʜ ᴠᴄ ᴘᴏᴡᴇʀ__
+© ᴘᴏᴡᴇʀᴇᴅ ʙʏ
+[ __@Xd_Lif ⚡ || @aish_jaan_0 ⚡__ ]
 """
 
 
@@ -39,17 +39,17 @@ HELP = """
 async def start(client, message):
     buttons = [
        [
-                InlineKeyboardButton('📢 Updates', url='https://t.me/TGBOTZXD'),
-                InlineKeyboardButton('💬 Support', url='https://t.me/TGBOTSXD')
+                InlineKeyboardButton('✨ ᴜᴘᴅᴀᴛᴇs', url='https://t.me/MISTY_SUPORT'),
+                InlineKeyboardButton('⚡ sᴜᴘᴘᴏʀᴛ', url='https://t.me/MISTY_SUPORTER')
                 ],[
-                InlineKeyboardButton('🤖 Developer', url='https://t.me/piroXpower'),
-                InlineKeyboardButton('🎧 Chats', url='https://t.me/frndsXworld')
+                InlineKeyboardButton('🤖 ᴅᴇᴠᴇʟᴏᴘᴇʀ', url='https://t.me/Xd_Lif'),
+                InlineKeyboardButton('🔥 ᴏᴡɴᴇʀ', url='https://t.me/aish_jaan_0')
                 ],[
-                InlineKeyboardButton('📜 Source Code 📜', url='https://github.com/TEAM-PATRICIA/PatriciaMusic2.0'),
+                InlineKeyboardButton('📜 sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ 📜', url='https://t.me/Xd_Lif'),
     ]
     ]
     reply_markup = InlineKeyboardMarkup(buttons)
-    await message.reply_photo(photo="https://telegra.ph/file/33cc1aeaf934f19943bdc.jpg", caption=HOME_TEXT.format(message.from_user.first_name, message.from_user.id), reply_markup=reply_markup)
+    await message.reply_photo(photo="https://telegra.ph/file/6c00f31503c49e1424f3f.jpg", caption=HOME_TEXT.format(message.from_user.first_name, message.from_user.id), reply_markup=reply_markup)
     await message.delete()
 
 
@@ -57,15 +57,15 @@ async def start(client, message):
 async def show_help(client, message):
     buttons = [
         [
-                InlineKeyboardButton('📢 Updates', url='https://t.me/TGBOTZXD'),
-                InlineKeyboardButton('💬 Support', url='https://t.me/TGBOTSXD')
+                InlineKeyboardButton('✨ ᴜᴘᴅᴀᴛᴇs', url='https://t.me/MISTY_SUPORT'),
+                InlineKeyboardButton('⚡ sᴜᴘᴘᴏʀᴛ', url='https://t.me/MISTY_SUPORTER')
                 ],[
-                InlineKeyboardButton('🤖 Developer', url='https://t.me/piroXpower'),
-                InlineKeyboardButton('🎧 Chats', url='https://t.me/frndsXworld')
+                InlineKeyboardButton('🤖 ᴅᴇᴠᴇʟᴏᴘᴇʀ', url='https://t.me/Xd_Lif'),
+                InlineKeyboardButton('🎧 🔥 ᴏᴡɴᴇʀ', url='https://t.me/aish_jaan_0')
                 ],[
-                InlineKeyboardButton('📜 Source Code 📜', url='https://github.com/TEAM-PATRICIA/PatriciaMusic2.0'),
+                InlineKeyboardButton('📜 sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ 📜', url='https://t.me/Xd_Lif'),
        ]
     ]
     reply_markup = InlineKeyboardMarkup(buttons)
-    await message.reply_photo(photo="https://telegra.ph/file/33cc1aeaf934f19943bdc.jpg", caption=HELP, reply_markup=reply_markup)
+    await message.reply_photo(photo="https://telegra.ph/file/6c00f31503c49e1424f3f.jpg", caption=HELP, reply_markup=reply_markup)
     await message.delete()
